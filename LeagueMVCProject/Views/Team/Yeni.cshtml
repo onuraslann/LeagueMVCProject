@@ -1,0 +1,31 @@
+﻿@model LeagueMVCProject.ViewModels.TeamViewModels
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Kaydet", "Team", FormMethod.Post))
+{
+
+
+    <div class=" form-group">
+
+        @Html.LabelFor(m => m.Teams.TeamName)
+        @Html.TextBoxFor(m => m.Teams.TeamName)
+    </div>
+    <div class=" form-group">
+
+        @Html.LabelFor(m => m.Teams.Color)
+        @Html.TextBoxFor(m => m.Teams.Color)
+    </div>
+    <div class=" form-group">
+
+        @Html.LabelFor(m => m.Teams.LeagueId)
+        @Html.TextBoxFor(m => m.Teams.Color)
+    </div>
+
+    <button type="submit" class="btn btn-success">Add</button>
+
+
+}

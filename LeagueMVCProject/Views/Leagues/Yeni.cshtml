@@ -1,0 +1,20 @@
+﻿@model LeagueMVCProject.Models.EntityFramework.Leagues
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Kaydet", "Leagues", FormMethod.Post)){ 
+
+    <div class="form-group">
+        @Html.LabelFor(m=>m.LeagueName)
+        @Html.TextBoxFor(m=>m.LeagueName)
+
+
+    </div>
+    @Html.HiddenFor(m=>m.Id)
+    <button type="submit" class="btn btn-success">Add</button>
+
+
+}
