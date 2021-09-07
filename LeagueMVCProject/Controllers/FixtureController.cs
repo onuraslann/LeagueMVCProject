@@ -8,30 +8,36 @@ using System.Web.Mvc;
 
 namespace LeagueMVCProject.Controllers
 {
-    public class TeamController : Controller
+    public class FixtureController : Controller
     {
         SuperLigEntities db = new SuperLigEntities();
         public ActionResult Index()
         {
-            var model = db.Teams.ToList();
+            var model = db.Fixtures.ToList();
             return View(model);
         }
+
         public ActionResult Yeni()
         {
-            var model = new TeamViewModels()
+            var model = new FixtureViewModels()
             {
-                Leagues = db.Leagues.ToList()
+                Teams = db.Teams.ToList()
             };
-            return View( "Yeni",model);
+            return View("Yeni", model);
+
         }
-        public ActionResult Kaydet(Teams teams)
+        public ActionResult Kaydet(Fixtures fixtures)
         {
-            if (teams.Id == 0)
+            if (fixtures.Id == 0)
             {
-                db.Teams.Add(teams);
+                db.Fixtures.Add(fixtures);
             }
             db.SaveChanges();
             return RedirectToAction("Index");
+
         }
     }
+        
+  
+
 }

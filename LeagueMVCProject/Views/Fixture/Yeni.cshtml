@@ -1,0 +1,30 @@
+﻿@model LeagueMVCProject.ViewModels.FixtureViewModels
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Kaydet", "Fixture", FormMethod.Post))
+{
+
+<div class=" form-group">
+
+    @Html.LabelFor(m => m.Fixtures.HomeTeamId)
+    @Html.DropDownListFor(m => m.Fixtures.HomeTeamId, new SelectList(Model.Teams, "Id", "TeamName"))
+</div>
+<div class=" form-group">
+
+    @Html.LabelFor(m => m.Fixtures.GuestTeamId)
+    @Html.DropDownListFor(m => m.Fixtures.GuestTeamId, new SelectList(Model.Teams, "Id", "TeamName"))
+</div>
+    <div class=" form-group">
+
+        @Html.LabelFor(m => m.Fixtures.MatchDate)
+       @Html.TextBoxFor(m=>m.Fixtures.MatchDate)
+    </div>
+
+    <button type="submit" class="btn btn-success">Add</button>
+
+}
+
+
+

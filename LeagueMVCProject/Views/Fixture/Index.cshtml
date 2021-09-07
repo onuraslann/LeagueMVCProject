@@ -1,0 +1,29 @@
+﻿@model List<LeagueMVCProject.Models.EntityFramework.Fixtures>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<a class="btn btn-success" href="/Fixture/Yeni">NewFixture</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>HomeTeamId</th>
+            <th>GuestTeamId</th>
+            <th>MatchDate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fixture in Model)
+        {
+            <tr>
+                <td>@fixture.Id</td>
+                <td>@fixture.Teams.TeamName</td>
+                <td>@fixture.Teams1.TeamName</td>
+                <td>@fixture.MatchDate</td>
+            </tr>
+        }
+    </tbody>
+</table>

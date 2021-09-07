@@ -1,0 +1,36 @@
+﻿@model List<LeagueMVCProject.Models.EntityFramework.Players>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a class="btn btn-success" href="/Player/Yeni">NewPlayer</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>TeamsId</th>
+            <th>Number</th>
+            <th>PositionName</th>
+            <th>Age</th>
+            <th>LeagueId</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var player in Model)
+        {
+        <tr>
+
+            <td>@player.Id</td>
+            <td>@player.FirstName</td>
+            <td>@player.LastName</td>
+            <td>@player.TeamsId</td>
+            <td>@player.Number</td>
+            <td>@player.PositionName</td>
+            <td>@player.Age</td>
+            <td>@player.Leagues.LeagueName</td>
+        </tr>
+        }
+    </tbody>
+</table>

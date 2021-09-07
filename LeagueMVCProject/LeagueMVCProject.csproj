@@ -129,7 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\FixtureController.cs" />
     <Compile Include="Controllers\LeaguesController.cs" />
+    <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -162,6 +164,8 @@
       <DependentUpon>LeagueModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\FixtureViewModels.cs" />
+    <Compile Include="ViewModels\PlayerViewModels.cs" />
     <Compile Include="ViewModels\TeamViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +185,10 @@
     <Content Include="Views\Leagues\Yeni.cshtml" />
     <Content Include="Views\Team\Index.cshtml" />
     <Content Include="Views\Team\Yeni.cshtml" />
+    <Content Include="Views\Player\Index.cshtml" />
+    <Content Include="Views\Player\Yeni.cshtml" />
+    <Content Include="Views\Fixture\Index.cshtml" />
+    <Content Include="Views\Fixture\Yeni.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

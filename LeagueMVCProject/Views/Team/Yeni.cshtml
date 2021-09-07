@@ -22,7 +22,7 @@
     <div class=" form-group">
 
         @Html.LabelFor(m => m.Teams.LeagueId)
-        @Html.TextBoxFor(m => m.Teams.Color)
+      @Html.DropDownListFor(m=>m.Teams.LeagueId, new SelectList(Model.Leagues,"Id","LeagueName"))
     </div>
 
     <button type="submit" class="btn btn-success">Add</button>
