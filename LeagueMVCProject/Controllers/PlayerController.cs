@@ -31,6 +31,37 @@ namespace LeagueMVCProject.Controllers
             {
                 db.Players.Add(players);
             }
+            else
+            {
+                var updatedEntity = db.Entry(players);
+                updatedEntity.State = System.Data.Entity.EntityState.Modified;
+
+            
+                    }
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Update(int id)
+        {
+
+            var model = new PlayerViewModels()
+            {
+                Leagues = db.Leagues.ToList(),
+                Teams = db.Teams.ToList(),
+                Players = db.Players.Find(id)
+
+
+            };
+            return View("Yeni", model);
+        }
+        public ActionResult Delete(int id)
+        {
+            var deletePlayer = db.Players.Find(id);
+            if (deletePlayer == null)
+            {
+                return HttpNotFound();
+            }
+            db.Players.Remove(deletePlayer);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -15,6 +15,8 @@
             <th>PositionName</th>
             <th>Age</th>
             <th>LeagueId</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -30,6 +32,8 @@
             <td>@player.PositionName</td>
             <td>@player.Age</td>
             <td>@player.Leagues.LeagueName</td>
+            <td><a class="btn btn-primary" href="/Player/Update/@player.Id">Update</a></td>
+            <td><a class="btn btn-warning" href="/Player/Delete/@player.Id">Delete</a></td>
         </tr>
         }
     </tbody>

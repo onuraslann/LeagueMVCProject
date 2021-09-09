@@ -11,17 +11,21 @@
             <th>TeamName</th>
             <th>Color</th>
             <th>LeagueId</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var team in Model)
         {
-            <tr>
-                <td>@team.Id</td>
-                <td>@team.TeamName</td>
-                <td>@team.Color</td>
-                <td>@team.Leagues.LeagueName</td>
-            </tr>
+        <tr>
+            <td>@team.Id</td>
+            <td>@team.TeamName</td>
+            <td>@team.Color</td>
+            <td>@team.Leagues.LeagueName</td>
+            <td><a class="btn btn-primary" href="/Team/Update/@team.Id">Update</a></td>
+            <td><a class="btn btn-warning" href="/Team/Delete/@team.Id">Delete</a></td>
+        </tr>
         }
     </tbody>
 </table>

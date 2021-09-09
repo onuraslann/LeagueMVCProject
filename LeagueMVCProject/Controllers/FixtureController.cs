@@ -32,9 +32,34 @@ namespace LeagueMVCProject.Controllers
             {
                 db.Fixtures.Add(fixtures);
             }
+            else
+            {
+                var updatedEntity = db.Entry(fixtures);
+                updatedEntity.State = System.Data.Entity.EntityState.Modified;
+            }
             db.SaveChanges();
             return RedirectToAction("Index");
 
+        }
+        public ActionResult Update(int id)
+        {
+            var model = new FixtureViewModels()
+            {
+                Teams = db.Teams.ToList(),
+                Fixtures = db.Fixtures.Find(id)
+            };
+            return View("Yeni", model);
+        }
+        public ActionResult Delete(int id)
+        {
+            var deletedFixture = db.Fixtures.Find(id);
+            if (deletedFixture == null)
+            {
+                return HttpNotFound();
+            }
+            db.Fixtures.Remove(deletedFixture);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
         

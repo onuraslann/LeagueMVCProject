@@ -13,17 +13,21 @@
             <th>HomeTeamId</th>
             <th>GuestTeamId</th>
             <th>MatchDate</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var fixture in Model)
         {
-            <tr>
-                <td>@fixture.Id</td>
-                <td>@fixture.Teams.TeamName</td>
-                <td>@fixture.Teams1.TeamName</td>
-                <td>@fixture.MatchDate</td>
-            </tr>
+        <tr>
+            <td>@fixture.Id</td>
+            <td>@fixture.Teams.TeamName</td>
+            <td>@fixture.Teams1.TeamName</td>
+            <td>@fixture.MatchDate</td>
+            <td><a class="btn btn-primary" href="/Fixture/Update/@fixture.Id">Update</a></td>
+            <td><a class="btn btn-warning" href="/Fixture/Delete/@fixture.Id">Delete</a></td>
+        </tr>
         }
     </tbody>
 </table>

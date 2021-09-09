@@ -42,5 +42,6 @@
         @Html.LabelFor(m => m.Players.LeagueId)
         @Html.DropDownListFor(m => m.Players.LeagueId, new SelectList(Model.Leagues, "Id", "LeagueName"))
     </div>
+    @Html.HiddenFor(m => m.Players.Id)
     <button type="submit" class="btn btn-success">Add</button>
 }

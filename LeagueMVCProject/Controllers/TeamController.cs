@@ -30,8 +30,36 @@ namespace LeagueMVCProject.Controllers
             {
                 db.Teams.Add(teams);
             }
+            else
+            {
+                var updatedEntity = db.Entry(teams);
+                updatedEntity.State = System.Data.Entity.EntityState.Modified;
+            }
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult Delete(int id)
+        {
+            var deletedTeam = db.Teams.Find(id);
+            if (deletedTeam == null)
+            {
+                return HttpNotFound();
+            }
+            db.Teams.Remove(deletedTeam);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Update(int id)
+        {
+            var model = new TeamViewModels()
+            {
+                Leagues = db.Leagues.ToList(),
+                Teams = db.Teams.Find(id)
+
+
+            };
+            return View("Yeni", model);
+            
         }
     }
 }

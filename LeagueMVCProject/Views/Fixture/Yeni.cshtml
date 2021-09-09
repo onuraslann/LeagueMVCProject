@@ -21,6 +21,7 @@
         @Html.LabelFor(m => m.Fixtures.MatchDate)
        @Html.TextBoxFor(m=>m.Fixtures.MatchDate)
     </div>
+    @Html.HiddenFor(m=>m.Fixtures.Id)
 
     <button type="submit" class="btn btn-success">Add</button>
 
