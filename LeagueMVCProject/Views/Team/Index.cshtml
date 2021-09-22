@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <a class="btn btn-success" href="/Team/Yeni">NewTeam</a>
-<table class="table table-bordered">
+<table class="table table-bordered" style="background-color:darkgray" id="tblTeam">
     <thead>
         <tr>
             <th>Id</th>
@@ -24,7 +24,7 @@
             <td>@team.Color</td>
             <td>@team.Leagues.LeagueName</td>
             <td><a class="btn btn-primary" href="/Team/Update/@team.Id">Update</a></td>
-            <td><a class="btn btn-warning" href="/Team/Delete/@team.Id">Delete</a></td>
+            <td><a class="btn btn-warning btnTeamDelete" data-id="@team.Id" >Delete</a></td>
         </tr>
         }
     </tbody>

@@ -6,7 +6,7 @@
 
 
 <a class="btn btn-success" href="/Fixture/Yeni">NewFixture</a>
-<table class="table table-bordered">
+<table class="table table-bordered" style="background-color:darkgray" id="tblFixturex">
     <thead>
         <tr>
             <th>Id</th>
@@ -26,7 +26,7 @@
             <td>@fixture.Teams1.TeamName</td>
             <td>@fixture.MatchDate.Value.ToString("dd-MM-yyyy")</td>
             <td><a class="btn btn-primary" href="/Fixture/Update/@fixture.Id">Update</a></td>
-            <td><a class="btn btn-warning" href="/Fixture/Delete/@fixture.Id">Delete</a></td>
+            <td><a class="btn btn-warning btnFixtureDelete" data-id="@fixture.Id" >Delete</a></td>
         </tr>
         }
     </tbody>

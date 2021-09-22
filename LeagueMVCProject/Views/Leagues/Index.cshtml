@@ -6,7 +6,7 @@
 }
 
 <a class="btn btn-success" href="/Leagues/Yeni">NewLeague</a>
-<table class="table table-bordered">
+<table class="table table-bordered"style="background-color:darkgray" id="tblLeagues">
     <thead>
         <tr>
             <th>Id</th>
@@ -23,7 +23,7 @@
             <td>@league.Id</td>
             <td>@league.LeagueName</td>
             <td><a class="btn btn-primary" href="/Leagues/Update/@league.Id">Update</a></td>
-            <td><a class="btn btn-warning" href="/Leagues/Delete/@league.Id">Delete</a></td>
+            <td><a class="btn btn-warning btnLeaguesDelete" data-id="@league.Id">Delete</a></td>
         </tr>
         }
     </tbody>

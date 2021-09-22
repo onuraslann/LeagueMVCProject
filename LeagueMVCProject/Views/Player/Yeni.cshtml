@@ -11,7 +11,7 @@
 
         @Html.LabelFor(m => m.Players.FirstName)
         @Html.TextBoxFor(m => m.Players.FirstName)
-        @Html.ValidationMessageFor(m=>m.Players.FirstName)
+        @Html.ValidationMessageFor(m => m.Players.FirstName)
     </div>
     <div class="form-group">
 
@@ -51,4 +51,9 @@
     </div>
     @Html.HiddenFor(m => m.Players.Id)
     <button type="submit" class="btn btn-success">Add</button>
+}
+@section Scripts{
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 }

@@ -13,7 +13,7 @@
 
         @Html.LabelFor(m => m.Teams.TeamName)
         @Html.TextBoxFor(m => m.Teams.TeamName)
-        @Html.ValidationMessageFor(m=>m.Teams.TeamName)
+        @Html.ValidationMessageFor(m => m.Teams.TeamName)
     </div>
     <div class=" form-group">
 
@@ -27,8 +27,13 @@
         @Html.DropDownListFor(m => m.Teams.LeagueId, new SelectList(Model.Leagues, "Id", "LeagueName"))
         @Html.ValidationMessageFor(m => m.Teams.LeagueId)
     </div>
-    @Html.HiddenFor(m=>m.Teams.Id)
+    @Html.HiddenFor(m => m.Teams.Id)
     <button type="submit" class="btn btn-success">Add</button>
 
 
+}
+@section Scripts{
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 }

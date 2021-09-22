@@ -5,17 +5,23 @@
 }
 
 
-@using (Html.BeginForm("Kaydet", "Leagues", FormMethod.Post)){ 
+@using (Html.BeginForm("Kaydet", "Leagues", FormMethod.Post))
+{
     @Html.AntiForgeryToken()
     <div class="form-group">
-        @Html.LabelFor(m=>m.LeagueName)
-        @Html.TextBoxFor(m=>m.LeagueName)
-        @Html.ValidationMessageFor(m=>m.LeagueName)
+        @Html.LabelFor(m => m.LeagueName)
+        @Html.TextBoxFor(m => m.LeagueName)
+        @Html.ValidationMessageFor(m => m.LeagueName)
 
 
     </div>
-    @Html.HiddenFor(m=>m.Id)
+    @Html.HiddenFor(m => m.Id)
     <button type="submit" class="btn btn-success">Add</button>
 
 
+}
+@section Scripts{
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 }
