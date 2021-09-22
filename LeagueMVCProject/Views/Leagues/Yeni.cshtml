@@ -6,7 +6,7 @@
 
 
 @using (Html.BeginForm("Kaydet", "Leagues", FormMethod.Post)){ 
-
+    @Html.AntiForgeryToken()
     <div class="form-group">
         @Html.LabelFor(m=>m.LeagueName)
         @Html.TextBoxFor(m=>m.LeagueName)

@@ -5,7 +5,7 @@
 }
 @using (Html.BeginForm("Kaydet", "Fixture", FormMethod.Post))
 {
-
+    @Html.AntiForgeryToken()
 <div class=" form-group">
 
     @Html.LabelFor(m => m.Fixtures.HomeTeamId)

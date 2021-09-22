@@ -25,6 +25,7 @@ namespace LeagueMVCProject.Controllers
             };
             return View( "Yeni",model);
         }
+        [ValidateAntiForgeryToken]
         public ActionResult Kaydet(Teams teams)
         {
             if (!ModelState.IsValid)

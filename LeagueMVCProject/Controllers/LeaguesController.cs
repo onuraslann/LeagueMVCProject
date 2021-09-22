@@ -19,7 +19,7 @@ namespace LeagueMVCProject.Controllers
         {
             return View("Yeni",new Leagues());
         }
-        
+        [ValidateAntiForgeryToken]
         public ActionResult Kaydet(Leagues leagues)
         {
             if (!ModelState.IsValid)

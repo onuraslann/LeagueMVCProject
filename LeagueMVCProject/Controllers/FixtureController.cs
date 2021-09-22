@@ -27,6 +27,7 @@ namespace LeagueMVCProject.Controllers
             return View("Yeni", model);
 
         }
+        [ValidateAntiForgeryToken]
         public ActionResult Kaydet(Fixtures fixtures)
         {
             if (!ModelState.IsValid)

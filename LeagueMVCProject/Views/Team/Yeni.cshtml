@@ -7,7 +7,7 @@
 
 @using (Html.BeginForm("Kaydet", "Team", FormMethod.Post))
 {
-
+    @Html.AntiForgeryToken()
 
     <div class=" form-group">
 
