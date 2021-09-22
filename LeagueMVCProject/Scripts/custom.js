@@ -1,5 +1,5 @@
 ﻿$(function () {
-   
+    $("#tblFixturex").DataTable();
     $("#tblFixturex").on("click", ".btnFixtureDelete", function () {
         var btn = $(this);
         bootbox.confirm("Fixturu silmek istediğinize eminmisiniz ? ", function (result) {
@@ -24,7 +24,7 @@
 
 });
 $(function () {
-
+    $("#tblLeagues").DataTable();
     $("#tblLeagues").on("click", ".btnLeaguesDelete", function () {
         var btn = $(this);
         bootbox.confirm("Ligi silmek istediğinize eminmisiniz ? ", function (result) {
@@ -51,7 +51,7 @@ $(function () {
 
 
 $(function () {
-
+    $("#tblPlayer").DataTable();
     $("#tblPlayer").on("click", ".btnPlayerDelete", function () {
         var btn = $(this);
         bootbox.confirm("Oyuncuyu  silmek istediğinize eminmisiniz ? ", function (result) {
@@ -76,7 +76,7 @@ $(function () {
 
 });
 $(function () {
-
+    $("#tblTeam").DataTable();
     $("#tblTeam").on("click", ".btnTeamDelete", function () {
         var btn = $(this);
         bootbox.confirm("Oyuncuyu  silmek istediğinize eminmisiniz ? ", function (result) {
