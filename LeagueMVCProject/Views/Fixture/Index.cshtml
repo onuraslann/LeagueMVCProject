@@ -24,7 +24,7 @@
             <td>@fixture.Id</td>
             <td>@fixture.Teams.TeamName</td>
             <td>@fixture.Teams1.TeamName</td>
-            <td>@fixture.MatchDate</td>
+            <td>@fixture.MatchDate.Value.ToString("dd-MM-yyyy")</td>
             <td><a class="btn btn-primary" href="/Fixture/Update/@fixture.Id">Update</a></td>
             <td><a class="btn btn-warning" href="/Fixture/Delete/@fixture.Id">Delete</a></td>
         </tr>

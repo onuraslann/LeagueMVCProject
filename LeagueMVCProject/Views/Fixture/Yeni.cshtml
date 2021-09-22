@@ -19,7 +19,7 @@
     <div class=" form-group">
 
         @Html.LabelFor(m => m.Fixtures.MatchDate)
-       @Html.TextBoxFor(m=>m.Fixtures.MatchDate)
+       @Html.TextBoxFor(m=>m.Fixtures.MatchDate ,new { type = "date",onchange= "CheckDateTypeIsValid(this)" })
     </div>
     @Html.HiddenFor(m=>m.Fixtures.Id)
 

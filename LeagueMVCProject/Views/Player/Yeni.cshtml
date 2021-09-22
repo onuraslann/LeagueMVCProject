@@ -11,36 +11,43 @@
 
         @Html.LabelFor(m => m.Players.FirstName)
         @Html.TextBoxFor(m => m.Players.FirstName)
+        @Html.ValidationMessageFor(m=>m.Players.FirstName)
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.Players.LastName)
         @Html.TextBoxFor(m => m.Players.LastName)
+        @Html.ValidationMessageFor(m => m.Players.LastName)
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.Players.Number)
         @Html.TextBoxFor(m => m.Players.Number)
+        @Html.ValidationMessageFor(m => m.Players.Number)
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.Players.PositionName)
         @Html.TextBoxFor(m => m.Players.PositionName)
+        @Html.ValidationMessageFor(m => m.Players.PositionName)
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.Players.Age)
         @Html.TextBoxFor(m => m.Players.Age)
+        @Html.ValidationMessageFor(m => m.Players.Age)
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.Players.TeamsId)
         @Html.DropDownListFor(m => m.Players.TeamsId, new SelectList(Model.Teams, "Id", "TeamName"))
+        @Html.ValidationMessageFor(m => m.Players.TeamsId)
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.Players.LeagueId)
         @Html.DropDownListFor(m => m.Players.LeagueId, new SelectList(Model.Leagues, "Id", "LeagueName"))
+        @Html.ValidationMessageFor(m => m.Players.LeagueId)
     </div>
     @Html.HiddenFor(m => m.Players.Id)
     <button type="submit" class="btn btn-success">Add</button>

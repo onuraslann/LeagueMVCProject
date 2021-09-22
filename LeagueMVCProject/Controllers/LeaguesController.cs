@@ -17,10 +17,15 @@ namespace LeagueMVCProject.Controllers
         }
         public ActionResult Yeni( )
         {
-            return View();
+            return View("Yeni",new Leagues());
         }
+        
         public ActionResult Kaydet(Leagues leagues)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Yeni");
+            }
             if (leagues.Id == 0)
             {
                 db.Leagues.Add(leagues);

@@ -21,13 +21,23 @@ namespace LeagueMVCProject.Controllers
         {
             var model = new FixtureViewModels()
             {
-                Teams = db.Teams.ToList()
+                Teams = db.Teams.ToList(),
+                Fixtures = new Fixtures()
             };
             return View("Yeni", model);
 
         }
         public ActionResult Kaydet(Fixtures fixtures)
         {
+            if (!ModelState.IsValid)
+            {
+                var model = new FixtureViewModels()
+                {
+                    Teams = db.Teams.ToList(),
+                    Fixtures=fixtures
+                };
+                return View("Yeni", model);
+            }
             if (fixtures.Id == 0)
             {
                 db.Fixtures.Add(fixtures);

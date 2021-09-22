@@ -11,16 +11,28 @@ namespace LeagueMVCProject.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Players
     {
         public int Id { get; set; }
+        [Required(ErrorMessage ="FirstName boþ geçilemez")]
         public string FirstName { get; set; }
+        [Required(ErrorMessage = "LastName boþ geçilemez")]
         public string LastName { get; set; }
+        [Display(Name ="TeamName")]
+        [Required(ErrorMessage = "TeamName boþ geçilemez")]
         public Nullable<int> TeamsId { get; set; }
+        [Required(ErrorMessage = "Number boþ geçilemez")]
+        [Range(1,99)]
         public Nullable<int> Number { get; set; }
+        [Required(ErrorMessage = "PositionName boþ geçilemez")]
         public string PositionName { get; set; }
+        [Required(ErrorMessage = "Age boþ geçilemez")]
+        [Range(18, 43)]
         public Nullable<int> Age { get; set; }
+        [Display(Name = "LeagueName")]
+        [Required(ErrorMessage = "LeagueName boþ geçilemez")]
         public Nullable<int> LeagueId { get; set; }
     
         public virtual Leagues Leagues { get; set; }

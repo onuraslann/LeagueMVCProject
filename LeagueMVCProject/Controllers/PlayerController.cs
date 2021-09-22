@@ -21,12 +21,24 @@ namespace LeagueMVCProject.Controllers
             var model = new PlayerViewModels()
             {
                 Leagues = db.Leagues.ToList(),
-                Teams = db.Teams.ToList()
+                Teams = db.Teams.ToList(),
+                Players=new Players()
             };
             return View("Yeni", model);
         }
         public ActionResult Kaydet(Players players)
         {
+            if (!ModelState.IsValid)
+            {
+                var model = new PlayerViewModels()
+                {
+                    Leagues = db.Leagues.ToList(),
+                    Teams = db.Teams.ToList(),
+                    Players=players
+                };
+                return View("Yeni", model);
+
+            }
             if (players.Id == 0)
             {
                 db.Players.Add(players);
