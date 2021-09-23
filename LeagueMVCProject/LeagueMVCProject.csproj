@@ -377,6 +377,7 @@
     <Compile Include="Controllers\FixtureController.cs" />
     <Compile Include="Controllers\LeaguesController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\UserssController.cs" />
     <Compile Include="Global.asax.cs">
@@ -443,6 +444,7 @@
     <Content Include="Views\Userss\Details.cshtml" />
     <Content Include="Views\Userss\Edit.cshtml" />
     <Content Include="Views\Userss\Index.cshtml" />
+    <Content Include="Views\Security\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

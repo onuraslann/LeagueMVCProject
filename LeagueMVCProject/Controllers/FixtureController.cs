@@ -8,9 +8,12 @@ using System.Web.Mvc;
 
 namespace LeagueMVCProject.Controllers
 {
+    
     public class FixtureController : Controller
     {
         SuperLigEntities db = new SuperLigEntities();
+
+       
         public ActionResult Index()
         {
             var model = db.Fixtures.ToList();

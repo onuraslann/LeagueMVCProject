@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace LeagueMVCProject.Controllers
 {
+    
     public class TeamController : Controller
     {
         SuperLigEntities db = new SuperLigEntities();
