@@ -12,18 +12,11 @@ namespace LeagueMVCProject.Models.EntityFramework
     using System;
     using System.Collections.Generic;
     
-    public partial class Players
+    public partial class Userss
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public Nullable<int> TeamsId { get; set; }
-        public Nullable<int> Number { get; set; }
-        public string PositionName { get; set; }
-        public Nullable<int> Age { get; set; }
-        public Nullable<int> LeagueId { get; set; }
-    
-        public virtual Leagues Leagues { get; set; }
-        public virtual Teams Teams { get; set; }
+        public string Name { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
     }
 }

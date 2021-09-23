@@ -29,5 +29,6 @@ namespace LeagueMVCProject.Models.EntityFramework
         public virtual DbSet<Leagues> Leagues { get; set; }
         public virtual DbSet<Players> Players { get; set; }
         public virtual DbSet<Teams> Teams { get; set; }
+        public virtual DbSet<Userss> Userss { get; set; }
     }
 }

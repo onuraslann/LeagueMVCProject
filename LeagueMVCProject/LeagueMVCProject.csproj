@@ -44,10 +44,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
@@ -378,6 +378,7 @@
     <Compile Include="Controllers\LeaguesController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\UserssController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -408,6 +409,9 @@
     <Compile Include="Models\EntityFramework\Teams.cs">
       <DependentUpon>LeagueModels.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EntityFramework\Userss.cs">
+      <DependentUpon>LeagueModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\FixtureViewModels.cs" />
     <Compile Include="ViewModels\PlayerViewModels.cs" />
@@ -434,6 +438,11 @@
     <Content Include="Views\Player\Yeni.cshtml" />
     <Content Include="Views\Fixture\Index.cshtml" />
     <Content Include="Views\Fixture\Yeni.cshtml" />
+    <Content Include="Views\Userss\Create.cshtml" />
+    <Content Include="Views\Userss\Delete.cshtml" />
+    <Content Include="Views\Userss\Details.cshtml" />
+    <Content Include="Views\Userss\Edit.cshtml" />
+    <Content Include="Views\Userss\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

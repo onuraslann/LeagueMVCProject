@@ -14,6 +14,7 @@
         <AssociationConnector Association="SuperLigModel.FK_Players_Leagues" ManuallyRouted="false" />
         <AssociationConnector Association="SuperLigModel.FK_Teams_Leagues1" ManuallyRouted="false" />
         <AssociationConnector Association="SuperLigModel.FK_Players_Teams" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SuperLigModel.Userss" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
