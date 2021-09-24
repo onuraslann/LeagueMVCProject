@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace LeagueMVCProject.Controllers
 {
-   
+    [Authorize(Roles = "Admin,Botanik")]
     public class PlayerController : Controller
     {
         SuperLigEntities db = new SuperLigEntities();

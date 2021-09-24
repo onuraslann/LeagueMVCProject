@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace LeagueMVCProject.Controllers
 {
+    [Authorize(Roles = "Admin,Botanik")]
     
     public class FixtureController : Controller
     {
