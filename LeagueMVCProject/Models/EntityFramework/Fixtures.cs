@@ -11,11 +11,16 @@ namespace LeagueMVCProject.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Fixtures
     {
         public int Id { get; set; }
+        [Display(Name =  "HomeTeamName boþ geçilemez")]
+        [Required(ErrorMessage ="HomeTeamName boþ geçilemez")]
         public Nullable<int> HomeTeamId { get; set; }
+        [Display(Name = "GuestTeamName boþ geçilemez")]
+        [Required(ErrorMessage = "GuestTeamName boþ geçilemez")]
         public Nullable<int> GuestTeamId { get; set; }
         public Nullable<System.DateTime> MatchDate { get; set; }
     
